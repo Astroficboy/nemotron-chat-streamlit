@@ -31,7 +31,7 @@ def get_response(prompt):
         for chunk in completion:
             if chunk.choices[0].delta.content is not None:
                 response += chunk.choices[0].delta.content
-                st.write(chunk.choices[0].delta.content, end="")
+                st.write(chunk.choices[0].delta.content)
                 time.sleep(0.05)  # Add a slight delay for better streaming experience
         return response
     except Exception as e:
