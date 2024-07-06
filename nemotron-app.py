@@ -1,10 +1,10 @@
 import streamlit as st
 from openai import OpenAI
 import time
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# load_dotenv()
 api_key = os.getenv("API_KEY")
 
 if not api_key:
