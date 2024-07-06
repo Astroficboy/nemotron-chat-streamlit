@@ -5,7 +5,7 @@ import time
 import os
 
 # load_dotenv()
-api_key = os.getenv(OPENAI_API_KEY)
+api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
     st.error("API key not found. Please set the API key in the environment variables.")
