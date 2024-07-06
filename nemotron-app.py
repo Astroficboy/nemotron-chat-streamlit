@@ -1,19 +1,19 @@
 import streamlit as st
 from openai import OpenAI
 import time
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
-load_dotenv()
-api_key = os.getenv("API_KEY")
+# load_dotenv()
+# api_key = os.getenv("API_KEY")
 
-if not api_key:
-    st.error("API key not found. Please set the API key in the environment variables.")
-    st.stop()
+# if not api_key:
+#     st.error("API key not found. Please set the API key in the environment variables.")
+#     st.stop()
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key=api_key
+    api_key="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"
 )
 
 # Function to generate a response from the model
