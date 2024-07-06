@@ -31,4 +31,4 @@ jobs:
 
       - name: Deploy application
         run: |
-          streamlit run app.py
+          streamlit run nemotron-app.py
