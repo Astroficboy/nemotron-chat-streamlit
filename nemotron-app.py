@@ -27,16 +27,21 @@ def get_response(prompt):
             max_tokens=1024,
             stream=True
         )
+        
         response = ""
+        
         for chunk in completion:
             if chunk.choices[0].delta.content is not None:
-                response += chunk.choices[0].delta.content
-                st.write(chunk.choices[0].delta.content)
+                response += chunk.choices[0].delta.content + " "  # Append content with a space
                 time.sleep(0.05)  # Add a slight delay for better streaming experience
+        
+        st.write(response)  # Write the entire response at once
         return response
+    
     except Exception as e:
         st.error(f"An error occurred: {e}")
         return ""
+
 
 # Initialize session state for chat history
 if "history" not in st.session_state:
